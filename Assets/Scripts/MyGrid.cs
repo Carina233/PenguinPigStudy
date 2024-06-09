@@ -44,6 +44,7 @@ public class MyGrid : MonoBehaviour
 
     public Color color;
     public Action OnClick;
+    
 
     private void Update()
     {
@@ -51,7 +52,8 @@ public class MyGrid : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        Debug.Log("OnMouseDown");
-        OnClick?.Invoke();
+        //Debug.Log("OnMouseDown");
+        //Debug.Log(OnClick.ToString());
+        //OnClick?.Invoke();
     }
 }

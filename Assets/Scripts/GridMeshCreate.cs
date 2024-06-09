@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static MainRun;
 
 public class GridMeshCreate : MonoBehaviour
 {
@@ -40,6 +41,28 @@ public class GridMeshCreate : MonoBehaviour
             {
                 m_grids[i,j]= CreateGrid(i, j);
                 Debug.Log("m_grids[i,j]" + m_grids[i, j]);
+            }
+        }
+
+
+    }
+
+
+    public void CreateMeshTest(int rows, int columns)
+    {
+        if (rows == 0 || columns == 0)
+        {
+            return;
+        }
+        ClearMesh();
+
+        m_grids = new MyGrid[rows,columns];
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < columns; j++)
+            {
+                m_grids[i, j] = CreateGrid(i, j);
+                Debug.Log("CreateMeshTest m_grids[i,j]" + m_grids[i, j]);
             }
         }
 
