@@ -49,6 +49,7 @@ public class MyGrid : MonoBehaviour
     private void Update()
     {
         gameObject.GetComponent<SpriteRenderer>().material.color = color;
+        
     }
     private void OnMouseDown()
     {
